@@ -2,7 +2,7 @@ describe('app', function () {
     'use strict';
     var app = window.app;
 
-    describe('Division function', function () {
+    xdescribe('Division function', function () {
         it('should divide number a by b', function () {
             expect(app.divide(10, 5)).toEqual(2);
             expect(app.divide(15, 3)).toEqual(5)
@@ -33,6 +33,30 @@ describe('app', function () {
         });
         it('should return false when b is equal 0', function () {
             expect(app.divide(101, 0)).toEqual(false);
+        });
+
+    });
+    describe('getDescendingNumbers function', function () {
+        it('counting down', function () {
+            expect(app.getDescendingNumbers(10,2)).toEqual('10 9 8 7 6 5 4 3 2');
+        });
+        it('counting down', function () {
+        expect(app.getDescendingNumbers(10,5)).toEqual('10 9 8 7 6 5');
+        });
+        xit('counting down type', function () {
+            expect(app.getDescendingNumbers(10,5)).toEqual(typeof descendingNumbers === 'number' );
+        });
+});
+
+    describe('areaOfTrapezoid function', function () {
+        it('area with a = -10', function () {
+            expect(app.areaOfTrapezoid(-10,5,2)).toEqual(false);
+        });
+        it('area with b = -5', function () {
+            expect(app.areaOfTrapezoid(10,-5,2)).toEqual(false);
+        });
+        it('area with h = -2', function () {
+            expect(app.areaOfTrapezoid(10,5,-2)).toEqual(false);
         });
     });
 });
